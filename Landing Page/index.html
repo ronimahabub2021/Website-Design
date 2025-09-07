@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Institute - Landing Page</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+    /* Dark Mode */
+    body.dark-mode {
+      background: #121212;
+      color: #ddd;
+    }
+    body.dark-mode .navbar {
+      background: #1c1c1c !important;
+    }
+    body.dark-mode .feature-card,
+    body.dark-mode .testimonial-card,
+    body.dark-mode .pricing-card {
+      background: #222 !important;
+      color: #ddd;
+    }
+    body.dark-mode footer {
+      background: #111;
+      color: #bbb;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    /* Features */
+    .feature-card {
+      border-radius: 15px;
+      padding: 30px;
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+    .testimonial-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    /* Pricing */
+    .pricing-card {
+      border-radius: 15px;
+      padding: 30px;
+      transition: transform 0.3s;
+      background: #f8f9fa;
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* CTA */
+    .cta {
+      background: #0066cc;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Dark Mode Toggle */
+    .dark-toggle {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">TrainUp Institute</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="dark-toggle ms-3" id="darkToggle">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container" data-aos="fade-up">
+      <h1>Upgrade Your Skills with Us</h1>
+      <p>Join our training programs and boost your career with practical knowledge.</p>
+      <a href="#features" class="btn btn-primary btn-lg">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="container my-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">Our Popular Courses</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="bg-light feature-card">
+          <h4>Web Development</h4>
+          <p>Learn HTML, CSS, JavaScript, and Bootstrap to build modern websites.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="bg-light feature-card">
+          <h4>Data Science</h4>
+          <p>Master Python, Machine Learning, and Data Analysis techniques.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="bg-light feature-card">
+          <h4>Microsoft Office</h4>
+          <p>Boost productivity with Excel, Word, and PowerPoint skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="container my-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">Pricing Plans</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="pricing-card text-center">
+          <h4>Basic</h4>
+          <h2>$49</h2>
+          <p>Access to 1 course</p>
+          <p>Email Support</p>
+          <button class="btn btn-outline-primary">Choose Plan</button>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="pricing-card text-center">
+          <h4>Standard</h4>
+          <h2>$99</h2>
+          <p>Access to 3 courses</p>
+          <p>Certificate Included</p>
+          <button class="btn btn-primary">Choose Plan</button>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="pricing-card text-center">
+          <h4>Premium</h4>
+          <h2>$149</h2>
+          <p>Access to all courses</p>
+          <p>1-on-1 Mentorship</p>
+          <button class="btn btn-outline-primary">Choose Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="container my-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">What Our Students Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="testimonial-card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student">
+          <h5>Rahim Ahmed</h5>
+          <p>"The web development course helped me land my first freelance project. Highly recommended!"</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="testimonial-card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student">
+          <h5>Sara Islam</h5>
+          <p>"Amazing teachers and practical projects. I improved my Data Science skills a lot."</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="testimonial-card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Student">
+          <h5>Arif Khan</h5>
+          <p>"The Microsoft Office training made me much more confident in my office job."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register" class="container my-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">Register Now</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <form class="p-4 border rounded bg-light">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="course" class="form-label">Select Course</label>
+            <select class="form-select" id="course">
+              <option>Web Development</option>
+              <option>Data Science</option>
+              <option>Microsoft Office</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" data-aos="fade-up">
+    <h2>Ready to Start Learning?</h2>
+    <p>Enroll today and take your career to the next level!</p>
+    <a href="#register" class="btn btn-light btn-lg">Join Now</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container my-5 text-center" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Email: info@trainup.com | Phone: +880 1234-567890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TrainUp Institute | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById('darkToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
